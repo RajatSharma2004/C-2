@@ -8,7 +8,9 @@ namespace ConsoleApp
     {
       Console.WriteLine("Start of the console app");
       BasicArray B = new BasicArray();
-      B.Operations();
+      //B.Operations();
+      //B.ZerosAtLast();
+      B.RotateArray();
     }
   }
 }
