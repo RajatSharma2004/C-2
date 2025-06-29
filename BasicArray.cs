@@ -88,7 +88,7 @@ public class BasicArray
     Console.WriteLine($"Array after rotating from position {pos}: {string.Join(" ", rotated)}");
   }
 
- 
+
   public int[] RemoveDuplicate(int[] arr)
   {
     Array.Sort(arr);
@@ -114,5 +114,18 @@ public class BasicArray
     }
 
     return finalResult;
+  }
+
+  public int MissingNumber(int[] arr)
+  {
+    int n = arr.Length+1;
+    int total = n * (n + 1) / 2;
+    int sum = 0;
+    foreach (int num in arr)
+    {
+      sum += num;
+    }
+    int missing = total-sum;
+    return missing;
   }
   }

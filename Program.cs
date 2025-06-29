@@ -14,9 +14,11 @@ namespace ConsoleApp
 
       Console.WriteLine("Enter an array ");
       int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
-      int[] result = B.RemoveDuplicate(arr);
+      //int[] result = B.RemoveDuplicate(arr);
 
-      Console.WriteLine($"The resultant array is {string.Join(" ", result)}");
+      //Console.WriteLine($"The resultant array is {string.Join(" ", result)}");
+      int res =B.MissingNumber(arr);
+      Console.WriteLine($"The missing number is {res}");
     }
   }
 }
