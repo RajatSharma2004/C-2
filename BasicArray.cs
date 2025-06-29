@@ -87,4 +87,32 @@ public class BasicArray
 
     Console.WriteLine($"Array after rotating from position {pos}: {string.Join(" ", rotated)}");
   }
-}
+
+ 
+  public int[] RemoveDuplicate(int[] arr)
+  {
+    Array.Sort(arr);
+    int n = arr.Length;
+    if (n == 0 || n == 1)
+    {
+      return arr;
+    }
+    int j = 0;
+    int[] result = new int[n];
+    for (int i = 0; i < n - 1; i++)
+    {
+      if (arr[i] != arr[i + 1])
+      {
+        result[j++] = arr[i];
+      }
+    }
+    result[j++] = arr[n - 1]; //j++ because it start with 0 so the length oj is more than value of j
+    int[] finalResult = new int[j];
+    for (int i = 0; i < j; i++)
+    {
+      finalResult[i] = result[i];
+    }
+
+    return finalResult;
+  }
+  }
